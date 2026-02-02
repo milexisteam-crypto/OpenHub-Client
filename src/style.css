@@ -1,5 +1,14 @@
+:root{
+    --background-color: #f6f6f6;
+    --surface-color: #f6f6f6;
+    --text-color: rgba(0, 0, 0, 0.5);
+    --nav-shadow: 0.1;
+    --hover-shadow: 0.75;
+}
+
 body{
     display: flex;
+    background-color: var(--background-color);
 }
 
 nav{
@@ -22,7 +31,7 @@ nav{
     left: 0px;
     top: 5px;
     position:  fixed;
-    box-shadow: 0 4px 6px rgba(0,0,0, 0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0, var(--nav-shadow));
 }
 
 .search{
@@ -32,7 +41,7 @@ nav{
     padding: 14px;
     border-radius: 14px;
     height: 18px;
-    background: #f6f6f6;
+    background: var(--background-color);
     transition: box-shadow 0.25s;
 }
 
@@ -40,23 +49,23 @@ nav{
     flex: 1;
     min-width: 0;
     font-size: 16px;
-    color: #333333;
+    color: var(--text-color);
     margin-left: 14px;
     outline: none;
     border: none;
     background: transparent;
 }
 
-.search:hover{
-    box-shadow: 0 0 2px rgba(0,0,0, 0.75);
+/*.search:hover{
+    box-shadow: 0 0 2px rgba(0,0,0, var(--hover-shadow));
 }
 
 .search:focus-within{
-    box-shadow: 0 0 2px rgba(0,0,0, 0.75);
-}
+    box-shadow: 0 0 2px rgba(0,0,0, var(--hover-shadow));
+}*/
 
 .material-symbols-outlined{
-    color:rgba(0,0,0, 0.5);
+    color:var(--text-color);
 }
 
 .material-symbols-outlined:hover{
