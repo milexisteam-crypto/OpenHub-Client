@@ -11,8 +11,8 @@ nav{
     gap: 16px;
     position:  fixed;
     top: 5px;
-    left: 1vw;
-    width: 98vw;
+    left: 5px;
+    width: calc(100vw - 10px);
 }
 
 .nav-shadow{
@@ -45,6 +45,10 @@ nav{
     outline: none;
     border: none;
     background: transparent;
+}
+
+.search:hover{
+    box-shadow: 0 0 2px rgba(0,0,0, 0.75);
 }
 
 .search:focus-within{
