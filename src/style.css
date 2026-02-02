@@ -68,6 +68,7 @@ nav{
     width: 45px;       
     height: 45px;     
     border-radius: 50%; 
+    aspect-ratio: 1/1;
     object-fit: cover;  
 }
 
