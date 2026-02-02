@@ -1,7 +1,7 @@
 const isDarkMode = () => 
   window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-if(isDarkMode){
+if(!isDarkMode){
     const root = document.documentElement;
     root.style.setProperty("--background-color", "#333333");
     root.style.setProperty("--surface-color", "#262626")
