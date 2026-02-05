@@ -26,10 +26,13 @@ if(isDarkMode()) {
 
 async function loadData() {
     const res = await fetch("http://127.0.0.1:8000/hello");
-    const data = await res.json();
+    const json = await res.json();
     const items = document.querySelectorAll(".item");
-    items.forEach((item, index) => {
-      item.querySelector(".item-title").textContent = data[index].title;
-      item.querySelector(".item-description").textContent = data[index].description;
-    });
+    json.data.forEach((element, index) => {
+    items[index].querySelector(".item-title").textContent =
+        element.title;
+
+      items[index].querySelector(".item-description").textContent =
+        element.description;
+  });
 }
