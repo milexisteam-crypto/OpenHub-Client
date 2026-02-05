@@ -23,3 +23,13 @@ if(isDarkMode()) {
   root.style.setProperty("--placeholder-color", "#9a9996");
   root.style.setProperty("--icon-color", "#c0bfbc");
 }
+
+async function loadData() {
+    const res = await fetch("http://127.0.0.1:8000/hello");
+    const data = await res.json();
+    const items = document.querySelectorAll(".item");
+    items.forEach((item, index) => {
+      item.querySelector(".item-title").textContent = data[index].title;
+      item.querySelector(".item-description").textContent = data[index].description;
+    });
+}
